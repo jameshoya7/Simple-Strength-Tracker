@@ -638,6 +638,106 @@
             .action-buttons {
                 flex-direction: column;
             }
+
+            /* Mobile Calendar Fixes */
+            .calendar-btn {
+                padding: 8px 12px;
+                font-size: 14px;
+                top: 15px;
+                right: 15px;
+            }
+            
+            .header h1 {
+                margin-right: 100px; /* Make room for calendar button */
+            }
+            
+            .calendar-container {
+                padding: 15px;
+            }
+            
+            .calendar-header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .month-nav {
+                padding: 8px 12px;
+                font-size: 14px;
+                min-width: 70px;
+            }
+            
+            .current-month {
+                font-size: 1.2em;
+                flex: 1;
+                min-width: 200px;
+                text-align: center;
+            }
+            
+            .monthly-stats {
+                padding: 12px;
+            }
+            
+            .monthly-volume {
+                font-size: 1.5em;
+            }
+            
+            .monthly-workouts {
+                font-size: 1em;
+            }
+            
+            .calendar-grid {
+                gap: 1px;
+            }
+            
+            .calendar-day-header {
+                padding: 8px 2px;
+                font-size: 12px;
+            }
+            
+            .calendar-day {
+                padding: 10px 2px;
+                min-height: 45px;
+                font-size: 14px;
+            }
+            
+            .workout-indicator {
+                width: 4px;
+                height: 4px;
+                margin-top: 1px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .calendar-btn {
+                padding: 6px 8px;
+                font-size: 12px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+                margin-right: 80px;
+            }
+            
+            .month-nav {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 60px;
+            }
+            
+            .current-month {
+                font-size: 1.1em;
+            }
+            
+            .calendar-day {
+                padding: 8px 1px;
+                min-height: 40px;
+                font-size: 13px;
+            }
+            
+            .calendar-day-header {
+                padding: 6px 1px;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
