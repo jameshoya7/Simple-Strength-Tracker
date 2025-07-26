@@ -1502,11 +1502,12 @@
             drawVolumeChart(currentExerciseName);
         }
 
-        // Backup System Functions
+        // FIXED: Backup System Functions with 4-letter words only
         function generateBackupCode() {
-            const adjectives = ['FLEX', 'PUMP', 'LIFT', 'IRON', 'BULK', 'GAINS', 'BEAST', 'POWER', 'STRONG', 'TITAN'];
+            // Using only 4-letter words to match validation
+            const adjectives = ['FLEX', 'PUMP', 'LIFT', 'IRON', 'BULK', 'HARD', 'MEGA', 'EPIC', 'BUFF', 'SWOL'];
             const numbers = Math.floor(1000 + Math.random() * 9000);
-            const animals = ['WOLF', 'LION', 'BEAR', 'HAWK', 'BULL', 'TIGER', 'RHINO', 'EAGLE', 'SHARK', 'DRAGON'];
+            const animals = ['WOLF', 'LION', 'BEAR', 'HAWK', 'BULL', 'LYNX', 'PUMA', 'SEAL', 'BOAR', 'STAG'];
             
             const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
             const animal = animals[Math.floor(Math.random() * animals.length)];
@@ -1581,8 +1582,9 @@
                 return;
             }
             
-            if (!/^[A-Z]+-\d{4}-[A-Z]+$/.test(backupCode)) {
-                showBackupStatus('Invalid backup code format. Use format: WORD-1234-WORD', 'error');
+            // Fixed validation - now only accepts 4-letter words
+            if (!/^[A-Z]{4}-\d{4}-[A-Z]{4}$/.test(backupCode)) {
+                showBackupStatus('Invalid backup code format. Use format: WORD-1234-WORD (4 letters each)', 'error');
                 return;
             }
             
